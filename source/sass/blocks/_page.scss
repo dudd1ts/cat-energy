@@ -1,0 +1,13 @@
+.page {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.page__body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 320px;
+}

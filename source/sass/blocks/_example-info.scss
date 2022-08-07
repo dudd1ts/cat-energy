@@ -1,0 +1,14 @@
+.example-info {
+  text-align: center;
+}
+
+.example-info__value {
+  margin: 0;
+  font: 400 24px/1 $font-family;
+}
+
+.example-info__description {
+  margin: 0;
+  font: 400 12px/1 "Arial", sans-serif;
+  color: $special-dark-grey;
+}

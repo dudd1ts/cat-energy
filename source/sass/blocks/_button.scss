@@ -1,0 +1,33 @@
+.button {
+  display: inline-block;
+  padding: 7px 26px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+  background-color: $basic-green;
+  border: none;
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+  }
+
+  &--secondary {
+    background-color: $basic-grey;
+    color: $special-dark-grey;
+
+    &:hover {
+      background-color: $special-grey-3;
+    }
+
+    &:active {
+      color: rgba($special-dark-grey, 0.3);
+    }
+  }
+}

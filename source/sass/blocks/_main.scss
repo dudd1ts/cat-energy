@@ -1,0 +1,52 @@
+.main__intro {
+  width: $mobile-width;
+  margin: 0 auto 20px;
+}
+
+.main__advantages {
+  margin-bottom: 50px;
+}
+
+.main__categories {
+  margin-bottom: 20px;
+}
+
+.main__title {
+  padding: 27px 20px 40px;
+  margin: 0 auto;
+  line-height: 1;
+  width: $mobile-width;
+}
+
+.main__form {
+  margin-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .main__intro {
+    width: $tablet-container;
+  }
+
+  .main__title {
+    margin: 0 auto;
+    width: $tablet-container;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main__title--padding-wide {
+    width: $tablet-width;
+    padding-left: 69px;
+    padding-right: 69px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__intro {
+    width: $desktop-container;
+  }
+
+  .main__title {
+    max-width: $desktop-container;
+  }
+}

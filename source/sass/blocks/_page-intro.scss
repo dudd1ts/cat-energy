@@ -1,0 +1,102 @@
+.page-intro {
+  position: relative;
+  padding-top: 28px;
+  text-align: center;
+  //width: 320px;
+  line-height: 1;
+
+  &::before {
+    content: "";
+    background: $basic-green url("../img/index-intro.jpg") no-repeat center bottom;
+    position: absolute;
+    width: 320px;
+    height: 302px;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: block;
+  }
+}
+
+.page-intro__title {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.page-intro__subtitle {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.page-intro__button {
+  font-size: 14px;
+  line-height: 18px;
+  width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-intro {
+    text-align: left;
+    position: relative;
+    min-height: 810px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .page-intro__title {
+    margin-left: 87px;
+    color: $black;
+  }
+
+  .page-intro__subtitle {
+    margin-left: 87px;
+    color: $black;
+  }
+
+  .page-intro__button {
+    margin-top: 13px;
+    margin-left: 87px;
+    width: auto;
+  }
+
+  .page-intro__image {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 709px;
+    height: 609px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-intro {
+    min-height: 580px;
+  }
+
+  .page-intro__title {
+    margin-top: 110px;
+    margin-left: 80px;
+    color: $black;
+  }
+
+  .page-intro__subtitle {
+    margin-left: 80px;
+    color: $black;
+  }
+
+  .page-intro__button {
+    margin-left: 80px;
+  }
+
+  .page-intro__image {
+    right: 220px;
+    bottom: auto;
+    top: 40px;
+    width: 552px;
+    height: 499px;
+  }
+}
