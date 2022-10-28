@@ -47,7 +47,7 @@
                   <label for="customer-weight">Вес (кг):*</label>
                   <input name="customer-weight" type="text" id="customer-weight" placeholder="7" required>
                 </div>
-                <div class="form__field field-text">
+                <div class="form__field form__field--no-indent field-text">
                   <label for="customer-age">Возраст (лет):</label>
                   <input name="customer-age" type="text" id="customer-age" placeholder="7">
                 </div>
@@ -63,7 +63,7 @@
                   <input name="program-type" type="radio" value="weight-gain" id="weight-gain">
                   <label for="weight-gain">Набор массы</label>
                 </div>
-                <div class="form__field field-radio">
+                <div class="form__field form__field--no-indent field-radio">
                   <input name="program-type" type="radio" value="weight-gain" id="weight-advice">
                   <label for="weight-advice">Не знаю (нужен ваш совет)</label>
                 </div>
@@ -71,9 +71,9 @@
             </div>
           </div>
 
-<!--          <h2 class="form__title secondary-title">Контактные данные(владельца кота)</h2>-->
+          <h2 class="form__title secondary-title secondary-title--narrow"><span>Контактные данные (владельца кота)</span></h2>
           <fieldset class="form__fieldset">
-            <div class="form__wrapper">
+            <div class="form__wrapper form__wrapper--two-columns">
               <div class="form__field field-text field-text--email">
                 <label for="customer-email">E-mail:*</label>
                 <input name="customer-email" type="email" id="customer-email" placeholder="kuklachev@gmail.com" required>
@@ -84,30 +84,30 @@
               </div>
             </div>
           </fieldset>
-<!--          <h2 class="form__title secondary-title">Комментарий</h2>-->
+          <h2 class="form__title secondary-title"><span>Комментарий</span></h2>
           <div class="form__fieldset">
             <div class="form__wrapper">
-              <div class="form__field">
-                <textarea class="field-textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <div class="form__field form__field--no-indent field-textarea">
+                <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
           </div>
-<!--          <h2 class="form__title secondary-title">Дополнительно</h2>-->
+          <h2 class="form__title secondary-title"><span>Дополнительно</span></h2>
           <div class="form__fieldset">
-            <div class="form__wrapper">
-              <div class="form__field field-checkbox">
+            <div class="form__wrapper form__wrapper--additional">
+              <div class="form__field form__field--additional field-checkbox">
                 <input name="sweetener" type="checkbox" id="sweetener">
                 <label for="sweetener">Cахарозаменитель</label>
               </div>
-              <div class="form__field field-checkbox">
+              <div class="form__field form__field--additional field-checkbox">
                 <input name="water" type="checkbox" id="water">
                 <label for="water">Питьевая вода</label>
               </div>
-              <div class="form__field field-checkbox">
+              <div class="form__field form__field--additional field-checkbox">
                 <input name="milk" type="checkbox" id="milk">
                 <label for="milk">Молоко</label>
               </div>
-              <div class="form__field field-checkbox">
+              <div class="form__field form__field--additional form__field--no-indent field-checkbox">
                 <input name="vitamins" type="checkbox" id="vitamins">
                 <label for="vitamins">Витамины</label>
               </div>

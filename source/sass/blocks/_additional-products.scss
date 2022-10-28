@@ -36,6 +36,7 @@
   .additional-products__list {
     width: $tablet-container;
     margin-bottom: 69px;
+    padding: 0;
   }
 }
 
@@ -56,6 +57,5 @@
     margin: 0;
     margin-right: 80px;
     flex-grow: 1;
-    padding: 0;
   }
 }

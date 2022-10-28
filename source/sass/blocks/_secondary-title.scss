@@ -10,33 +10,50 @@
     display: inline-block;
     box-sizing: content-box;
     padding-right: 20px;
+    padding-left: 20px;
+    margin-left: -20px;
     max-width: $mobile-container;
   }
 
   &::after {
     content: "";
     position: absolute;
+    left: -1000px;
     z-index: -1;
     height: 2px;
-    background-color: $basic-green;
-    top: 16px;
     width: 3000px;
-    left: 20px;
+    top: 16px;
+    background-color: $basic-green;
+  }
+}
+
+.secondary-title--narrow {
+  max-width: 245px;
+
+  span {
+    position: relative;
+    left: -38px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .secondary-title {
     width: $tablet-container;
+    padding: 0;
 
     span {
-      padding-left: 37px;
+      padding-left: 38px;
       padding-right: 36px;
+      margin-left: 0;
       max-width: $tablet-container;
     }
+  }
 
-    &::after {
-      left: -1000px;
+  .secondary-title--narrow {
+    max-width: none;
+
+    span {
+      position: static;
     }
   }
 }

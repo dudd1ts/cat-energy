@@ -1,24 +1,23 @@
-.field-text {
+.field-textarea {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
 
-  label {
-    padding-right: 13px;
-    font: 400 16px/20px $font-family;
-    color: $special-dark-grey;
-    text-transform: uppercase;
-  }
-
-  input {
+  textarea {
     padding: 11px 14px 12px;
     border: 1px solid $grey-4;
     flex-grow: 1;
     font: 400 16px/20px $font-family;
     color: $special-dark-grey;
     text-transform: uppercase;
+    resize: vertical;
+    min-height: 150px;
 
     &:hover {
       border-color: $special-grey;
+    }
+
+    &:invalid {
+      border-color: $status-error;
     }
 
     &:focus {
@@ -28,18 +27,6 @@
   }
 }
 
-.field-text--invalid {
+.field-textarea--invalid textarea {
   border-color: $status-error;
-}
-
-
-@media (min-width: $desktop-width) {
-  .field-text--email {
-    width: 569px;
-    margin-right: 80px;
-  }
-
-  .field-text--phone {
-    flex-grow: 1;
-  }
 }

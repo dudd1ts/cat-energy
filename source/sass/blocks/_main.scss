@@ -24,7 +24,9 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
 
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
   .main__title--padding-wide {
     width: $tablet-width;
     padding-left: 69px;
@@ -34,6 +36,6 @@
 
 @media (min-width: $desktop-width) {
   .main__title {
-    max-width: $desktop-container;
+    width: $desktop-container;
   }
 }
