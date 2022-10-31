@@ -1,0 +1,51 @@
+.button-toggle {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    width: 24px;
+    height: 2px;
+    background-color: $black;
+    box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+  }
+}
+
+.button-toggle--close::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: $black;
+}
+
+.button-toggle--close::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+.button-toggle--close::before,
+.button-toggle--close::after {
+  top: 32px;
+  right: 19px;
+}
+
+@media (min-width: $tablet-width) {
+  .button-toggle {
+    display: none;
+  }
+}
