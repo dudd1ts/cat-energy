@@ -4,7 +4,7 @@
 
 .page-footer__wrapper {
   width: $mobile-width;
-  padding: 20px;
+  padding: 39px 20px 22px;
   margin: 0 auto;
 }
 
@@ -20,9 +20,20 @@
 }
 
 .page-footer__logo {
-  margin: 10px auto 30px;
+  margin: 0 auto 32px;
   display: block;
   width: 128px;
+  height: 24px;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+    transition: none;
+  }
 
   img {
     display: block;
@@ -30,13 +41,13 @@
 }
 
 .page-footer__copyright {
-  padding-top: 20px;
+  padding-top: 22px;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
     width: $tablet-container;
-    padding: 60px 0;
+    padding: 57px 0 56px;
     display: flex;
     align-items: center;
   }
@@ -58,6 +69,6 @@
 @media (min-width: $desktop-width) {
   .page-footer__wrapper {
     width: $desktop-container;
-    padding: 60px 0;
+    padding: 57px 0 58px;
   }
 }

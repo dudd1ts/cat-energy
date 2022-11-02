@@ -1,10 +1,18 @@
 .social-link {
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 22px;
   overflow: hidden;
   white-space: nowrap;
   text-indent: 100%;
+
+  &:hover svg {
+    fill: $basic-green;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 
   svg {
     position: absolute;
@@ -12,5 +20,7 @@
     left: 50%;
     display: block;
     transform: translate(-50%, -50%);
+    transition: fill 0.2s ease;
+    fill: $special-grey-2;
   }
 }

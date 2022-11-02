@@ -1,14 +1,58 @@
 .example-info {
   text-align: center;
+  position: relative;
+  border: 1px solid $special-grey;
+  border-radius: 3px;
+  width: 124px;
+  padding: 14px 14px 17px;
 }
 
 .example-info__value {
   margin: 0;
   font: 400 24px/1 $font-family;
+  text-transform: uppercase;
 }
 
 .example-info__description {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 87px;
   margin: 0;
   font: 400 12px/1 "Arial", sans-serif;
   color: $special-dark-grey;
+  background-color: $background-color;
+}
+
+
+@media (min-width: $tablet-width) {
+  .example-info {
+    padding: 20px 15px 20px;
+    width: 162px;
+  }
+
+  .example-info__value {
+    font-size: 30px;
+  }
+
+  .example-info__description {
+    width: auto;
+    padding-left: 7px;
+    padding-right: 8px;
+    white-space: nowrap;
+    bottom: -7px;
+    font-size: 14px;
+    background-color: #ffffff;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example-info__description {
+    background-color: $basic-grey;
+  }
 }

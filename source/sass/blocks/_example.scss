@@ -1,6 +1,6 @@
 .example {
-  background-color: $background-color;
   padding: 25px 0 40px;
+  background-color: $background-color;
 }
 
 .example__wrapper {
@@ -18,13 +18,13 @@
 }
 
 .example__text {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   font: 400 14px/18px "Arial", sans-serif;
   color: $special-dark-grey;
 }
 
 .example__list {
-  margin: 0;
+  margin: 0 0 34px;
   padding: 0;
   list-style: none;
   display: flex;
@@ -32,18 +32,51 @@
 }
 
 .example__total {
+  margin: 0 0 40px;
   font: 400 14px/20px $font-family;
   text-transform: uppercase;
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
+  .example {
+    position: relative;
+    padding-top: 37px;
+    padding-bottom: 61px;
+    border-top: 1px solid $grey-3;
+    background-color: transparent;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 462px;
+      background-color: $background-color;
+    }
+  }
+
   .example__wrapper {
     width: $tablet-container;
+    padding: 0;
+  }
+
+  .example__title {
+    margin-bottom: 63px;
+  }
+
+  .example__text {
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .example__info {
     display: flex;
+    align-items: center;
   }
 
   .example__list {
@@ -56,10 +89,30 @@
 
   .example__total {
     margin-left: auto;
+    text-align: right;
+    font-size: 20px;
+  }
+
+  .example__total-value {
+    display: block;
+    margin-top: 8px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .example {
+    padding-bottom: 70px;
+    border-top: none;
+
+    &::after {
+      background-color: $basic-grey;
+    }
+  }
+
+  .example__title {
+    margin-bottom: 146px;
+  }
+
   .example__wrapper {
     width: $desktop-container;
     display: flex;
@@ -67,14 +120,36 @@
   }
 
   .example__text-content {
-    width: 440px;
+    width: 436px;
+  }
+
+  .example__text {
+    margin-top: 0;
+    margin-bottom: 70px;
   }
 
   .example__info {
     display: block;
+    margin-bottom: 0;
+  }
+
+  .example__list {
+    margin-bottom: 60px;
   }
 
   .example__total {
     width: 100%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .example__total-value {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 63px;
+  }
+
+  .example__comparison {
+    margin-top: -37px;
   }
 }

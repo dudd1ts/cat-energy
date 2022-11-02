@@ -9,6 +9,7 @@
   color: #ffffff;
   background-color: $basic-green;
   border: none;
+  transition: background-color 0.3s $basic-green-2;
 
   &:hover {
     background-color: $basic-green-2;

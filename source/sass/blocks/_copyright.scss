@@ -7,4 +7,23 @@
   justify-content: space-between;
   width: 100%;
   white-space: nowrap;
+
+  &:hover svg {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    fill: $special-grey-2;
+    transition: fill 0.2s ease;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    margin-right: 22px;
+  }
 }

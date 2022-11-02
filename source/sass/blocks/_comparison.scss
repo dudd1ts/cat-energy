@@ -6,6 +6,158 @@
   background: transparent;
 }
 
-.comparison__image--after {
+.comparison__images {
+  margin-bottom: 15px;
+}
+
+.comparison__image-wrapper--after {
   display: none;
+}
+
+.comparison__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.comparison__range {
+  width: 85px;
+  height: 14px;
+  background: #ffffff;
+  border: 1px solid $special-grey;
+  border-radius: 7px;
+  position: relative;
+}
+
+.comparison__range-toggle {
+  width: 35.66px;
+  height: 6px;
+  background-color: $basic-green;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+
+.comparison__range-bar {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .comparison {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comparison__images {
+    position: relative;
+    height: 511px;
+    width: 592px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+
+  .comparison__image-wrapper {
+    position: absolute;
+    top: 0;
+    height: 511px;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .comparison__image-wrapper--after {
+    display: block;
+    right: 0;
+
+    img {
+      position: absolute;
+      height: 511px;
+      width: 536px;
+      top: 0;
+      right: 0;
+      max-width: 536px;
+    }
+  }
+
+  .comparison__image-wrapper--before {
+    left: 0;
+
+    img {
+      position: absolute;
+      height: 511px;
+      width: 665px;
+      top: 0;
+      left: -7px;
+      max-width: 665px;
+    }
+  }
+
+  .comparison__controls {
+    width: auto;
+  }
+
+  .comparison__range {
+    width: 426px;
+    height: 6px;
+    margin-left: 23px;
+    margin-right: 23px;
+    border-radius: 6px;
+    background-color: $grey-1;
+    border: none;
+  }
+
+  .comparison__range-toggle {
+    width: 34px;
+    height: 34px;
+    left: calc(50% - 17px);
+    border: 1px solid $grey-1;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    box-shadow: 0 1px 3px rgba($black, 0.16);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 4px rgba($black, 0.19);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba($black, 0.2);
+      border-color: $basic-green;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: $basic-green;
+      pointer-events: none;
+    }
+  }
+
+  .comparison__button {
+    padding: 0;
+    border-bottom: 1px dotted rgba($black, 0.24);
+    font-size: 20px;
+    line-height: 30px;
+    transition: border-bottom 0.3s ease;
+
+    &:hover {
+      border-bottom: 1px solid rgba($black, 0.4);
+    }
+
+    &:active {
+      border-bottom: none;
+      transition: none;
+    }
+  }
 }

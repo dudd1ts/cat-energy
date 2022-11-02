@@ -5,6 +5,7 @@
   width: 100%;
   z-index: 1;
   background-color: #ffffff;
+  transition: top 0.3s linear;
 }
 
 .main-nav__list {
@@ -27,6 +28,7 @@
   text-transform: uppercase;
   color: $black;
   font: 500 20px/40px $font-family;
+  transition: opacity 0.2s ease;
 
   &:hover {
     opacity: 0.6;
@@ -34,6 +36,7 @@
 
   &:active {
     opacity: 0.3;
+    transition: none;
   }
 }
 

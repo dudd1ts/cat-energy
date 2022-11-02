@@ -15,10 +15,20 @@
 .page-header__logo {
   display: flex;
   align-items: center;
+  transition: opacity 0.2s ease;
 
   img {
     width: 191px;
     height: 37.61px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: none;
   }
 }
 

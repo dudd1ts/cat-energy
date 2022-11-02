@@ -18,7 +18,7 @@
   }
 
   &::before {
-    background: url("../img/index-intro.jpg") no-repeat center bottom;
+    background: url("../img/index-intro.jpg") no-repeat 57% bottom;
     background-size: 800px 325px;
   }
 
@@ -34,28 +34,34 @@
 }
 
 .page-intro__title {
+  margin: 0 0 25px;
   color: #ffffff;
   font-size: 36px;
   font-weight: 400;
 }
 
 .page-intro__subtitle {
+  margin: 0 0 29px;
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .page-intro__button {
   font-size: 14px;
   line-height: 18px;
   width: 280px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 @media (min-width: $tablet-width) {
   .page-intro {
-    text-align: left;
+    padding-top: 62px;
+    min-height: 874px;
     position: relative;
-    min-height: 810px;
+    text-align: left;
 
     &::before,
     &::after {
@@ -65,22 +71,33 @@
 
   .page-intro__wrapper {
     width: $tablet-container;
+    padding: 0;
   }
 
   .page-intro__title {
+    width: 420px;
     margin-left: 87px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
     color: $black;
   }
 
   .page-intro__subtitle {
     margin-left: 87px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 20px;
     color: $black;
   }
 
   .page-intro__button {
-    margin-top: 13px;
-    margin-left: 87px;
     width: auto;
+    margin-left: 87px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   .page-intro__image {
@@ -94,7 +111,8 @@
 
 @media (min-width: $desktop-width) {
   .page-intro {
-    min-height: 580px;
+    padding-top: 62px;
+    min-height: 582px;
   }
 
   .page-intro__wrapper {
@@ -102,7 +120,7 @@
   }
 
   .page-intro__title {
-    margin-top: 110px;
+    margin-top: 58px;
     margin-left: 80px;
     color: $black;
   }
@@ -117,9 +135,9 @@
   }
 
   .page-intro__image {
-    right: 220px;
+    right: 331px;
     bottom: auto;
-    top: 40px;
+    top: 30px;
     width: 552px;
     height: 499px;
   }

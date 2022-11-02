@@ -2,3 +2,10 @@
   font: 400 36px/40px $font-family;
   color: $black;
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 60px;
+    line-height: 1;
+  }
+}

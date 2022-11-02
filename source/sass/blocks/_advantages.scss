@@ -12,6 +12,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  counter-reset: advantages;
 }
 
 .advantages__item {
@@ -36,22 +37,22 @@
 
   &--healthy::before {
     background-image: url("../img/leaf.svg");
-    background-size: 26px 28px;
+    background-size: 30px 32px;
   }
 
   &--powder::before {
     background-image: url("../img/powder.svg");
-    background-size: 30px 31px;
+    background-size: 29px 31px;
   }
 
   &--meal::before {
     background-image: url("../img/cutlery.svg");
-    background-size: 26px 30px;
+    background-size: 25px 30px;
   }
 
   &--time::before {
     background-image: url("../img/scale.svg");
-    background-size: 25px 30px;
+    background-size: 32px 33px;
   }
 }
 
@@ -64,23 +65,46 @@
 @media (min-width: $tablet-width) {
   .advantages__wrapper {
     width: $tablet-container;
+    padding: 0;
   }
 
   .advantages__list {
     display: grid;
     grid-template-columns: 250px 250px;
     justify-content: space-between;
-    grid-row-gap: 37px;
+    grid-row-gap: 135px;
   }
 
   .advantages__item {
     width: 250px;
+    margin-bottom: 0;
     flex-direction: column;
+    position: relative;
 
     &::before {
+      width: 80px;
+      height: 80px;
       margin-right: 0;
       margin-bottom: 30px;
     }
+
+    &::after {
+      counter-increment: advantages;
+      content: counter(advantages);
+      display: block;
+      position: absolute;
+      left: 120px;
+      top: -39px;
+      z-index: -1;
+      color: $basic-grey;
+      font-size: 280px;
+      line-height: 280px;
+    }
+  }
+
+  .advantages__text {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 

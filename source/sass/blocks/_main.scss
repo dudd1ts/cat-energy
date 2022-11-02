@@ -24,6 +24,14 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  .main__categories {
+    margin-bottom: 45px;
+  }
+
+  .main__advantages {
+    margin-bottom: 100px;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
@@ -35,7 +43,19 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main__intro {
+    margin-bottom: 82px;
+  }
+
   .main__title {
     width: $desktop-container;
+  }
+
+  .main__categories {
+    margin-bottom: 71px;
+  }
+
+  .main__advantages {
+    margin-bottom: 120px;
   }
 }
