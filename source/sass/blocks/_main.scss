@@ -13,6 +13,10 @@
   width: $mobile-width;
 }
 
+.main__catalog {
+  margin-bottom: 25px;
+}
+
 .main__form {
   margin-bottom: 35px;
 }
@@ -31,6 +35,10 @@
 
   .main__advantages {
     margin-bottom: 100px;
+  }
+
+  .main__catalog {
+    margin-bottom: 68px;
   }
 }
 
@@ -57,5 +65,9 @@
 
   .main__advantages {
     margin-bottom: 120px;
+  }
+
+  .main__catalog {
+    margin-bottom: 76px;
   }
 }

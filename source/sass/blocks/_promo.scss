@@ -1,7 +1,7 @@
 .promo {
   width: 280px;
   min-height: 290px;
-  background: $basic-green url("../img/promo-bg.jpg") no-repeat center;
+  background: url("../img/promo-bg-mobile@1x.jpg") no-repeat center;
   background-size: cover;
   text-align: center;
 }
@@ -25,6 +25,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url("../img/promo-bg-tablet@1x.jpg");
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .promo {
+      background-image: url("../img/promo-bg-tablet@2x.jpg");
+    }
   }
 
   .promo__icon {
@@ -45,6 +52,13 @@
     flex-direction: column;
     justify-content: center;
     padding: 55px 40px 42px;
+    background-image: url("../img/promo-bg-desktop@1x.jpg");
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .promo {
+      background-image: url("../img/promo-bg-tablet@2x.jpg");
+    }
   }
 
   .promo__icon {

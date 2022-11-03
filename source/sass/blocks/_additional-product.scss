@@ -7,6 +7,7 @@
 .additional-product__title {
   margin: 0 0 13px;
   font: 400 16px/1 $font-family;
+  text-transform: uppercase;
 }
 
 .additional-product__specification {
@@ -36,8 +37,17 @@
     justify-content: space-between;
   }
 
+  .additional-product__title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
   .additional-product__specification {
+    margin-bottom: 25px;
     text-align: right;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .additional-product__price {
@@ -45,10 +55,9 @@
   }
 }
 
-
 @media (min-width: $desktop-width) {
   .additional-product {
-    padding: 17px 0 15px;
+    padding: 15px 0 17px;
     border-left: none;
     border-right: none;
     align-items: center;
@@ -61,6 +70,7 @@
 
   .additional-product__order {
     width: auto;
+    min-width: 244px;
   }
 
   .additional-product__specification {

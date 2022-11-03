@@ -40,6 +40,12 @@
   .secondary-title {
     width: $tablet-container;
     padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after {
+      top: 22px;
+    }
 
     span {
       padding-left: 38px;
