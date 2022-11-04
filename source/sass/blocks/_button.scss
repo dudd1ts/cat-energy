@@ -10,6 +10,7 @@
   background-color: $basic-green;
   border: none;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: $basic-green-2;

@@ -1,7 +1,79 @@
 .field-radio {
+  input {
+    display: none;
+  }
+
   label {
+    position: relative;
+    display: block;
+    padding: 6px 0 6px 46px;
     font: 400 16px/18px $font-family;
     color: $special-dark-grey-2;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      border-radius: 50%;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border: 1px solid $special-grey;
+      transition: border-color 0.2s ease;
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 13.5px;
+      height: 13.5px;
+      background-color: $basic-green;
+    }
+
+    &:hover::before {
+      border-color: $grey-5;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: none;
+    }
+  }
+
+  input:checked + label::after {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field-radio {
+    label {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 5px 0 5px 60px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+
+      &::after {
+        width: 18px;
+        height: 18px;
+        left: 11px;
+      }
+    }
   }
 }

@@ -13,6 +13,10 @@
   width: $mobile-width;
 }
 
+.main__title--form {
+  padding-bottom: 37px;
+}
+
 .main__catalog {
   margin-bottom: 25px;
 }
@@ -29,6 +33,10 @@
     padding-right: 0;
   }
 
+  .main__title--form {
+    padding-bottom: 54px;
+  }
+
   .main__categories {
     margin-bottom: 45px;
   }
@@ -40,10 +48,14 @@
   .main__catalog {
     margin-bottom: 68px;
   }
+
+  .main__form {
+    margin-bottom: 72px;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-  .main__title--padding-wide {
+  .main__title--form {
     width: $tablet-width;
     padding-left: 69px;
     padding-right: 69px;
@@ -69,5 +81,9 @@
 
   .main__catalog {
     margin-bottom: 76px;
+  }
+
+  .main__form {
+    margin-bottom: 82px;
   }
 }

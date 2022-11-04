@@ -1,7 +1,79 @@
 .field-checkbox {
+  min-height: 30px;
+
+  input {
+    display: none;
+  }
+
   label {
+    display: block;
+    padding: 6px 0 0 46px;
+    position: relative;
     font: 400 16px/18px $font-family;
     color: $special-dark-grey-2;
     text-transform: uppercase;
+    transition: opacity 0.2s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      cursor: pointer;
+      position: absolute;
+    }
+
+    &::before {
+      display: block;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      top: 0;
+      border: 1px solid $special-grey;
+      transition: border-color 0.2s ease;
+    }
+
+    &::after {
+      display: none;
+      width: 18px;
+      height: 14px;
+      background: url("../img/tick.svg") no-repeat center;
+      background-size: contain;
+      left: 6.25px;
+      top: 8.09px;
+    }
+
+    &:hover::before {
+      border-color: $grey-5;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: none;
+    }
+  }
+
+  input:checked + label::after {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field-checkbox {
+    label {
+      font-size: 20px;
+      line-height: 30px;
+      padding-left: 59px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+
+      &::after {
+        width: 24px;
+        height: 18.67px;
+        left: 8px;
+        top: 11px;
+      }
+    }
   }
 }
