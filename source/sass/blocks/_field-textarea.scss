@@ -11,22 +11,47 @@
     text-transform: uppercase;
     resize: vertical;
     min-height: 150px;
+    transition: border-color 0.2s ease;
 
-    &:hover {
-      border-color: $special-grey;
+    &:hover,
+    &:focus {
+      padding: 10px 13px 11px;
     }
 
-    &:invalid {
-      border-color: $status-error;
+    &:hover {
+      border: 2px solid $special-grey;
     }
 
     &:focus {
       outline: none;
-      border-color: $special-dark-grey;
+      border: 2px solid $special-dark-grey;
     }
   }
 }
 
 .field-textarea--invalid textarea {
-  border-color: $status-error;
+  padding: 10px 13px 11px;
+  border: 2px solid $status-error;
+}
+
+@media (min-width: $tablet-width) {
+  .field-textarea {
+    textarea {
+      font-size: 20px;
+      line-height: 30px;
+      padding-left: 19px;
+      padding-right: 19px;
+
+      &:hover,
+      &:focus {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+    }
+  }
+
+  .field-textarea--invalid textarea {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }

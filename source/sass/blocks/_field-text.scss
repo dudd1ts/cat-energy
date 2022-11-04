@@ -16,20 +16,92 @@
     font: 400 16px/20px $font-family;
     color: $special-dark-grey;
     text-transform: uppercase;
+    transition: border-color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      padding: 10px 13px 11px;
+    }
 
     &:hover {
-      border-color: $special-grey;
+      border: 2px solid $special-grey;
+      padding: 10px 13px 11px;
     }
 
     &:focus {
       outline: none;
-      border-color: $special-dark-grey;
+      border: 2px solid $special-dark-grey;
     }
   }
 }
 
+.field-text input:hover + svg {
+  fill: $basic-green;
+}
+
 .field-text--invalid {
-  border-color: $status-error;
+  input {
+    padding: 10px 13px 11px;
+    border: 2px solid $status-error;
+  }
+
+  svg {
+    fill: $status-error;
+  }
+}
+
+.field-text--phone,
+.field-text--email {
+  position: relative;
+
+  input {
+    padding-right: 45px;
+
+    &:hover,
+    &:focus {
+      padding: 10px 44px 11px 13px;
+    }
+  }
+
+  svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.field-text--phone svg {
+  width: 20px;
+  height: 20px;
+  right: 13px;
+}
+
+.field-text--email svg {
+  width: 17px;
+  height: 13px;
+  right: 16px;
+}
+
+.field-text--phone.field-text--invalid,
+.field-text--email.field-text--invalid {
+  input {
+    padding-right: 44px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field-text {
+    label {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    input {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
 }
 
 
