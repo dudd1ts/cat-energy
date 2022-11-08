@@ -13,6 +13,13 @@
 }
 
 @media (min-width: $desktop-width) {
+
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page__body--index::before {
+      background: #65a83e url("../img/index-intro-desktop@2x.jpg") no-repeat top right;
+    }
+  }
+
   .page__body--index {
     position: relative;
 
@@ -25,7 +32,7 @@
       top: 0;
       right: 0;
       z-index: -1;
-      background: #65a83e url("../img/index-intro-desktop.jpg") no-repeat top right;
+      background: #65a83e url("../img/index-intro-desktop@1x.jpg") no-repeat top right;
       background-size: 720px 694px;
     }
   }
