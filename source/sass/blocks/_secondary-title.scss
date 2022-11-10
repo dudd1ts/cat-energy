@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .secondary-title {
   font: 400 24px/26px $font-family;
   width: $mobile-width;

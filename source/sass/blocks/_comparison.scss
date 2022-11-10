@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .comparison__button {
   border: none;
   font: 400 16px/20px $font-family;

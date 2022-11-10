@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .page {
   font-family: $font-family;
   font-weight: 400;
@@ -13,8 +15,7 @@
 }
 
 @media (min-width: $desktop-width) {
-
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .page__body--index::before {
       background: #65a83e url("../img/index-intro-desktop@2x.jpg") no-repeat top right;
     }

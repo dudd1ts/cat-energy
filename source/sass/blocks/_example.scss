@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .example {
   padding: 25px 0 40px;
   background-color: $background-color;
