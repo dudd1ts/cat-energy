@@ -11,6 +11,8 @@
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=4fd8cb68-9a43-40fe-a706-ecb2ef576206&lang=ru_RU"
+            type="text/javascript"></script>
     <script defer src="js/app.min.js"></script>
   </head>
   <body class="page__body page__body--index">
@@ -161,7 +163,7 @@
           <span>Санкт-Петербург</span>
         </address>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map" id="contacts__map"></div>
     </section>
 
     <footer class="page-footer">
@@ -193,8 +195,5 @@
         </div>
       </div>
     </footer>
-    <script async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1jh3x-AAMkKO1Qia-AyNueUfR27KXg34&callback=initMap">
-    </script>
   </body>
 </html>
